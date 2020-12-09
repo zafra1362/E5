@@ -44,10 +44,10 @@ public class Main {
         System.out.println(Xifrar.getPublicKey(certRuta));
 
         // E4
-        KeyStore keyStore = KeyStore.getInstance(KeyStore.getDefaultType());
+        KeyStore guardar = KeyStore.getInstance(KeyStore.getDefaultType());
         try (InputStream keyStoreData = new FileInputStream(Ruta)) {
-            keyStore.load(keyStoreData, passwordChar);
-            System.out.println(Xifrar.getPublicKey(keyStore,"lamevaclaum9",keystoreContra));
+            guardar.load(keyStoreData, passwordChar);
+            System.out.println(Xifrar.getPublicKey(guardar,"lamevaclaum9",keystoreContra));
         }
 
         // E5
